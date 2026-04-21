@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #050505;
+  --color-brand-dark-green: #0d1e18;
+  --color-brand-green: #2bca95;
+  --color-brand-turquoise: #47ebdd;
+  --color-brand-gray: #5d666a;
+  --color-brand-red: #ff6a78;
+  --color-brand-amber: #ffb35a;
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@layer base {
+  :root {
+    color: white;
+    background: var(--color-brand-black);
+    font-family: var(--font-sans);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(43, 202, 149, 0.08), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(71, 235, 221, 0.08), transparent 35%),
+      var(--color-brand-black);
+  }
+
+  button {
+    font: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins);
+  }
+}
+
+@layer utilities {
+  .bg-mesh {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glass-panel {
+    background: linear-gradient(180deg, rgba(13, 30, 24, 0.6), rgba(8, 12, 12, 0.42));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(71, 235, 221, 0.12);
+    border-radius: 1.5rem;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 42px rgba(43, 202, 149, 0.16);
+  }
+
+  .glow-turquoise {
+    box-shadow: 0 0 42px rgba(71, 235, 221, 0.18);
+  }
+
+  .caption-pill {
+    border: 1px solid rgba(71, 235, 221, 0.22);
+    background: rgba(71, 235, 221, 0.08);
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-brand-turquoise);
+  }
+
+  .presentation-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .presentation-scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .scroll-fade-bottom {
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0));
+  }
+}
