@@ -49,9 +49,9 @@ export const SCENES: SceneDefinition[] = [
     shortTitle: 'Fase C',
     icon: Bot,
     steps: [
-      { id: 'fuentes', label: 'Fuentes externas', shortLabel: 'Fuentes' },
-      { id: 'analisis', label: 'Análisis automatizado', shortLabel: 'Análisis' },
-      { id: 'salida', label: 'Ficha y score de contexto', shortLabel: 'Salida' },
+      { id: 'investigan', label: 'Qué investigan', shortLabel: 'Chequeo' },
+      { id: 'senales', label: 'Qué señales buscan', shortLabel: 'Señales' },
+      { id: 'entrega', label: 'Qué entregan', shortLabel: 'Entrega' },
     ],
   },
 ];
